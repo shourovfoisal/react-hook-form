@@ -37,6 +37,14 @@ export const YoutubeForm = () => {
                 pattern: {
                   value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
                   message: "email is invalid."
+                },
+                validate: {
+                  canNotBeAdmin: (fieldValue) => {
+                    return fieldValue !== "admin@example.com" || "can not enter that email."
+                  },
+                  blacklistedWebsite: (fieldValue) => {
+                    return !fieldValue.endsWith("baddomain.com") || "that is not a good website."
+                  }
                 }
               })} />
               <p className="error">{errors.email?.message}</p>
