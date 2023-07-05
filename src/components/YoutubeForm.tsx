@@ -22,7 +22,7 @@ export const YoutubeForm = () => {
 
   return (
     <div>
-        <form onSubmit={handleSubmit(onSubmit)} noValidate>
+        {/* <form onSubmit={handleSubmit(onSubmit)} noValidate> */}
             <div className="form-control">
               <label htmlFor="username">Username</label>
               <input type="text" id="username" {...register("username", {
@@ -58,8 +58,9 @@ export const YoutubeForm = () => {
               <p className="error">{errors.channel?.message}</p>
             </div>
 
-            <button>Submit</button>
-        </form>
+            {/* <button>Submit</button> */}
+            <button type="button" onClick={handleSubmit(onSubmit)}>Submit</button>
+        {/* </form> */}
 
         <DevTool control={control} />
     </div>
