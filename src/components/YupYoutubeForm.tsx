@@ -21,7 +21,7 @@ let dv = {
 	channel: "",
 };
 
-const YupYoutubeForm = () => {
+export const YupYoutubeForm = () => {
 	const form = useForm<FormValueType>({
 		defaultValues: dv,
 		resolver: yupResolver(schema),
@@ -78,5 +78,3 @@ const YupYoutubeForm = () => {
 		</div>
 	);
 };
-
-export default YupYoutubeForm;
