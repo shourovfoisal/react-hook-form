@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import { YoutubeForm } from "./components/YoutubeForm";
 import { RefComponents } from "./components/RefComponents";
 import { UseControllerHook } from "./components/UseControllerHook";
+import { FormComponent } from "./components/FormComponent";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 					<Route path="/yup-form" element={<YupYoutubeForm />} />
 					<Route path="/ref-components" element={<RefComponents />} />
 					<Route path="/use-controller" element={<UseControllerHook />} />
+					<Route path="/form-component" element={<FormComponent />} />
 				</Routes>
 			</div>
 		</Fragment>

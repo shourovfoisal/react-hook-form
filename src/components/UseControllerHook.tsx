@@ -1,7 +1,5 @@
 import { UseControllerProps, useController, useForm } from "react-hook-form";
 
-type Props = {};
-
 type FormValues = {
 	name: string;
 	age: number;
@@ -32,7 +30,7 @@ function Input(props: UseControllerProps<FormValues>) {
 	);
 }
 
-export const UseControllerHook = (props: Props) => {
+export const UseControllerHook = () => {
 	const { control, handleSubmit } = useForm<FormValues>({
 		defaultValues: { name: "Shourov", age: 29 },
 	});
