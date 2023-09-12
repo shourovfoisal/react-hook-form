@@ -19,6 +19,9 @@ export const Navbar = () => {
 				<li className="px-3 py-2 bg-slate-100">
 					<Link to="/form-component">Form Component</Link>
 				</li>
+				<li className="px-3 py-2 bg-slate-100">
+					<Link to="/use-form">useForm Hook</Link>
+				</li>
 			</ul>
 		</div>
 	);

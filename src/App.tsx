@@ -1,22 +1,15 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import "./App.css";
 import { Navbar } from "./components/Navbar";
-// import { YoutubeForm } from './components/YoutubeForm'
 import { YupYoutubeForm } from "./components/YupYoutubeForm";
 import { Routes, Route } from "react-router-dom";
 import { YoutubeForm } from "./components/YoutubeForm";
 import { RefComponents } from "./components/RefComponents";
 import { UseControllerHook } from "./components/UseControllerHook";
 import { FormComponent } from "./components/FormComponent";
-
-interface Person {
-	age: number;
-	hairColor: "black" | "brown" | "blonde";
-}
+import { UseFormHook } from "./components/UseFormHook";
 
 function App() {
-	const [person, setPerson] = useState({});
-
 	return (
 		<Fragment>
 			<Navbar />
@@ -27,6 +20,7 @@ function App() {
 					<Route path="/ref-components" element={<RefComponents />} />
 					<Route path="/use-controller" element={<UseControllerHook />} />
 					<Route path="/form-component" element={<FormComponent />} />
+					<Route path="/use-form" element={<UseFormHook />} />
 				</Routes>
 			</div>
 		</Fragment>
